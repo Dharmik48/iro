@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
+import Image from 'next/image'
 
 const DURATION = 1
 
@@ -22,7 +23,7 @@ const MainLoading = () => {
 	const variants = {
 		text: { color: colors.map(c => c.text) },
 		bg: { backgroundColor: colors.map(c => c.bg) },
-		hide: { translateX: '100%' },
+		hide: { translateY: '100%' },
 	}
 
 	if (animationState === 'hidden') return null
@@ -42,6 +43,12 @@ const MainLoading = () => {
 					e === 'bg' ? setAnimationState('done') : setAnimationState('hidden')
 				}
 			>
+				<Image
+					fill
+					src={'/grains.png'}
+					className='w-full h-full opacity-40'
+					alt='grains texture'
+				/>
 				<div className='flex flex-col items-center justify-between'>
 					<motion.h1
 						className='font-black drop-shadow-sm text-9xl'
