@@ -31,7 +31,7 @@ const MainLoading = () => {
 	return (
 		<AnimatePresence>
 			<motion.div
-				className='absolute inset-0 items-center justify-center flex'
+				className='absolute inset-0 items-center justify-center flex z-50'
 				initial={{ backgroundColor: colors[0].bg }}
 				animate={animationState === 'done' ? 'hide' : 'bg'}
 				variants={variants}
