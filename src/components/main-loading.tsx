@@ -3,8 +3,7 @@
 import { useState } from 'react'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import Image from 'next/image'
-
-const DURATION = 1
+import { LOADING_DURATION as DURATION } from '@/utils/constants'
 
 const MainLoading = () => {
 	const [animationState, setAnimationState] = useState('live')

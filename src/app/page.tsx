@@ -2,6 +2,7 @@ import Image from 'next/image'
 import MainLoading from '@/components/main-loading'
 import Game from '@/components/game'
 import WinScreen from '@/components/WinScreen'
+import Timer from '@/components/Timer'
 
 export default function Home() {
 	return (
@@ -20,13 +21,14 @@ export default function Home() {
 				alt='grains texture'
 			/> */}
 			<MainLoading key={'loader'} />
-			<div className='self-start mb-10'>
+			<div className='self-start mb-10 flex justify-between w-full items-center'>
 				<h1
 					className='text-5xl md:text-6xl font-extrabold tracking-tight text-[#824141]'
 					style={{ textShadow: '5px 5px #debcba' }}
 				>
 					iro!
 				</h1>
+				<Timer />
 			</div>
 			<div className='w-full my-auto self-center'>
 				<Game />
